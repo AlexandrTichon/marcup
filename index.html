@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -35,12 +36,49 @@
                     And We're taking it seriously...
             </h3>
         </div>
-        <div class="header_in_btns">
-            <div class="log_btn">Login</div>
-            <div class="reg_btn">Register</div>
-        </div>
     </div>
-
+    <section>
+    <form class="login_form" action="#">
+        <button class="log_btn">LOGIN</button>
+        <button class="reg_btn">REGISTER</button>
+    </form>
+    </section>
+    <main>
+        <section class="check">
+            <div class="domain_review">
+                <div class="suggest_block">
+                    <p class="sugg_qstn">Whould you like to bue a new domain?</p>
+                    <p class="sugg_descript">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Suspendisse auctor mauris ac nulla interdum, id molestier.</p>
+                </div>
+            </div>
+            <form class="domain_form" action="#" method="post">
+					<label class="domain_label" for="domain-input">www.</label>
+					<input class="domain_input" type="text" name="domain-input" id="domain-input" placeholder="What do you want?">
+					<div class="domain_select_wrapper">
+						<select class="domain_select" name="domain-select" id="domain-select">
+							<option class="domain_option" value="com" selected>.com</option>
+							<option class="domain_option" value="net">.net</option>
+							<option class="domain_option" value="org">.org</option>
+						</select>
+					</div>
+            </form>
+            <table class="domains_table">
+                <tr class="row_1">
+                    <th>.COM</th>
+                    <td>1 Year</td>
+                    <td>$9.00 USD</td>
+                    <td>Transfer Price No</td>
+                </tr>
+                <tr class="row_1">
+                    <th>.NET</th>
+                    <td>1 Year</td>
+                    <td>$9.00 USD</td>
+                    <td>Transfer Price No</td>
+                </tr>
+            </table>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

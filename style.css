@@ -9,7 +9,7 @@ li{
     list-style: none;
 }
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif, 'Montserrat';
 }
 header{
     width: 100%;
@@ -21,7 +21,7 @@ header{
     background-image: url(img/safe_image.jpg);
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.83);
-    height: 1064px;
+    height: 943px;
 }
 
 nav{
@@ -40,7 +40,7 @@ nav .header__logo{
 }
 .topnav a{
     color: #ffffff;
-    font-family: Lato;
+    font-family: "Lato";
     font-size: 16px;
     font-weight: 500;
     padding: 34px 16px;
@@ -73,16 +73,111 @@ nav .header__logo{
     margin-top: 33px;
 }
 
-.header_in_btns{
-    background-image: url(img/btn_background.png);
-    background-size: 100% 121px;
-    height: 17px;
-    color: #ffffff;
-    font-family: Lato;
+.login_form{
+    background: #2fac6c;
+    background-size: 100% 122px;
+    height: 122px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login_form .log_btn{
+    background-image: url(img/log_background.png);
+    background-size: 100% 100%;
+    background-color: Transparent;
+}
+
+.login_form .reg_btn{
+    background-color: Transparent;
+}
+.log_btn, .reg_btn{
+    font-family: "Lato";
     font-size: 19px;
     font-weight: 500;
     text-transform: uppercase;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    height: 122px;
+    width: 50%;
 }
+
+
+/*section check domain*/
+
+section.check{
+    background-color: #ffffff;
+    width: 100%;
+    height: 578px;
+}
+section.check div.domain_review .suggest_block{
+    text-align: center;
+    margin-top: 90px;
+}
+section.check div.domain_review .suggest_block p.sugg_qstn{
+    font-family: 'Lato';
+    font-size: 22px;
+    color: rgba(56, 55, 55, 255);
+}
+section.check div.domain_review .suggest_block p.sugg_descript{
+    font-family: 'Montserrat';
+    font-size: 15px;
+    color: rgba(162, 162, 162, 255);
+    margin-top: 27px;
+}
+
+
+section.check form.domain_form{
+    text-align: center;
+    width: 890px;
+    height: 50px;
+    border: 1px solid #cbcbcb; 
+    display: flex;
+    margin: auto;
+    margin-top: 49px;
+}
+
+section.check form.domain_form label.domain_label{
+    margin: 5px 0;
+	padding: 8px 15px;
+	font-size: 16px;
+	line-height: 16px;
+	background-color: transparent;
+	color: #cbcbcb;
+	border-right: 1px solid #d9d9d9;
+}
+section.check form.domain_form input.domain_input{
+    padding: 15px;
+    font-size: 15px;
+    width: 730px;
+    border: 0;
+    background-color: transparent;
+    font-weight: 500;
+    padding-right: 0;
+}
+section.check form.domain_form .domain_select_wrapper{
+    position: relative;
+    height: auto;
+    margin: 5px 0;
+    width: 85px;
+    overflow: hidden;
+    border-left: 1px solid #d9d9d9;
+}
+section.check form.domain_form .domain_select{
+    height: 100%;
+    font-size: 16px;
+	line-height: 16px;
+	background-color: transparent;
+    color: #cbcbcb;
+    border: 0;
+}
+
+
+/*table*/
+
+
 
 
 
