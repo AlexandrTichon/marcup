@@ -175,7 +175,135 @@ section.check form.domain_form .domain_select{
 }
 
 
-/*table*/
+/* my table*/
+section.check table.domain_table{
+    margin:auto;
+    margin-top: 38px;
+    margin-bottom: 90px;
+    width: 892px;
+    height: 197px;
+    padding: 19px;
+    border: 1px solid #d9d9d9;
+}
+
+section.check table.domain_table tr, td{
+    text-align: center;
+    width: 220px;
+    height: 99px;
+    margin-top: 19px;
+    color: rgba(203, 203, 203, 255);
+    font-size: 12px;
+    font-family:'Lato';
+}
+.domain_table tr td::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    color:black;
+    display: inline-block;
+}
+
+
+
+
+
+/*package section*/
+section.package{
+    width: 100%;
+    height: 1067px;
+    background-color: #ffffff;
+    height: 710px;
+    background-blend-mode: multiply;
+    background-image: url(img/sect_backg.jpg);
+    background-size: 100% 400px ;
+    background-repeat:no-repeat;
+    
+    /*
+    background-blend-mode: multiply;
+    background-image: repeating-linear-gradient(-45deg,
+    transparent,
+    transparent 5px,
+    rgba(80, 80, 80, 0.692) 6px,
+    rgba(80, 80, 80, 0.692) 1px); */
+
+}
+section.package div.cards_sect{
+    margin:auto;
+    width: 75%;
+    height: 655px;
+    padding-top: 100px;
+    padding-bottom: 96px;
+    border-bottom: 2px dotted #d4d4d4;
+
+}
+
+
+div.cards_sect section{
+    position: relative;
+    float: left;
+    width: 255px;
+    height: 565px;
+    min-height: 570px;
+    border: 0;
+    background: #ffffff;
+}
+div.cards_sect section.box_left{
+    border-top: 5px solid #f9d423;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.15), 0 0 0 1px #eee;
+    
+}
+.package-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #f9d423;
+    font-size: 17px;
+    font-weight: bold;
+    border: 5px solid #f9d423;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    margin: auto;
+    margin-top: 36px;
+    transform: rotate(315deg);
+    
+}
+.package-icon .icon{
+    transform: rotate(45deg);
+    padding: 15px 15px;
+  }
+
+div.cards_sect section.box_left .package-name{
+    text-align: center;
+    height: 16px;
+    color: #282828;
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 28px;
+    margin-right: 27px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+div.cards_sect section.box_left .package-features{
+    display: flex;
+    flex-direction: column;
+    height: 245px;
+    margin-left: 28px;
+    margin-right: 27px;
+    padding-bottom: 19px;
+}
+
+
+
+
+
+
+
+
 
 
 
