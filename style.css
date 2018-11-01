@@ -211,9 +211,8 @@ section.check table.domain_table tr, td{
 /*package section*/
 section.package{
     width: 100%;
-    height: 1067px;
+    height: max-content;
     background-color: #ffffff;
-    height: 710px;
     background-blend-mode: multiply;
     background-image: url(img/sect_backg.jpg);
     background-size: 100% 400px ;
@@ -420,16 +419,98 @@ section.box_right .package-icon{
 
 /*ABOUT US*/
 section.about_us{
-    width: 100%;
-    height: 400px;
-    margin-top: 107px;
+    width: 75%;
+    height: max-content;
+    display: flex;
+    margin: 107px auto;
 }
 
+.about_us .story{
+    width: max-content;
+    border-right: 2px dotted #d4d4d4;
+    padding-right: 99px;
+}
+.about_us .title{
+    width: 147px;
+    height: max-content;
+    font-size: 35px;
+    color: #303030;
+    font-family: "Lato";
+}
 
+.about_us .title span.about{
+    font-weight: 900;
+}
+.about_us .title span.us{
+    font-weight: 400;
+}
 
+section.about_us .slogan{
+    width: 419px;
+    height: 126px;
+    margin-top: 33px;
+    color: #747474;
+    font-family: "Lato";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27.08px;
+}
+/*pers-info*/
+.about_us .pers-info{
+    height:  200px;
+    width: 655px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 105px;
+}
 
+.about_us .pers-info .creators{
+    width: auto;
+    height: 100%;
+}
 
-
+.creators .photo{
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    background-color: #e5e5e5;
+}
+.creators .photo .cut{
+    margin-top: -28px;
+    margin-left: -74px;
+}
+.creators .name, .proffesion{
+    margin: auto;
+    margin-top: 21px;
+    width: max-content;
+    height: max-content;
+    color: #303030;
+    font-family: "Lato";
+    font-size: 17px;
+    font-weight: 600;
+}
+.creators .proffesion{
+    color: #8e8e8e;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.creators .icons{
+    display: flex;
+    justify-content: space-between;
+    height: 15px;
+    color: #bfbfbf;
+    font-family: "Font Awesome";
+    font-weight: 400;
+    margin-right: 8px;
+    margin-top: 12px;
+}
+.creators .icons i {
+    width: 8px;
+}
 
 
 
