@@ -235,9 +235,12 @@ section.package div.cards_sect{
     padding-top: 100px;
     padding-bottom: 96px;
     border-bottom: 2px dotted #d4d4d4;
-
+    display: flex;
+    justify-content: space-between;
 }
-
+div.cards_sect section{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.15), 0 0 0 1px #eee;    
+}
 
 div.cards_sect section{
     position: relative;
@@ -248,22 +251,11 @@ div.cards_sect section{
     border: 0;
     background: #ffffff;
 }
-div.cards_sect section.box_left{
-    border-top: 5px solid #f9d423;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.15), 0 0 0 1px #eee;
-    
-}
 .package-icon{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #f9d423;
+    width: 45px;
+    height: 45px;
     font-size: 17px;
     font-weight: bold;
-    border: 5px solid #f9d423;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
     margin: auto;
     margin-top: 36px;
     transform: rotate(315deg);
@@ -271,36 +263,167 @@ div.cards_sect section.box_left{
 }
 .package-icon .icon{
     transform: rotate(45deg);
-    padding: 15px 15px;
+    padding: 13px;
   }
 
-div.cards_sect section.box_left .package-name{
+  div.cards_sect section .package-name{
     text-align: center;
     height: 16px;
     color: #282828;
-    font-family: Lato;
+    font-family: 'Lato';
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-left: 28px;
-    margin-right: 27px;
-    padding-bottom: 19px;
-    border-bottom: 1px solid #dfdfdf;
+    margin: 0 28px;
+    padding: 20px 0;
 }
 
-div.cards_sect section.box_left .package-features{
+.cards_sect section .package-features{
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     height: 245px;
     margin-left: 28px;
     margin-right: 27px;
-    padding-bottom: 19px;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.cards_sect .package-features .prop span.name{
+    color: #b4b4b4;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 300;
+    float: left;
+}
+
+.cards_sect .package-features .prop span.val{
+    float: right;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.cards_sect .tariff-cost{
+    width: 105px;
+    height: 21px;
+    margin: auto;
+    margin-top: 34px;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+.cards_sect .tariff-cost span.dollar{
+    font-size: 15px;
+    font-weight: 800;
+}
+.cards_sect .tariff-cost span.cost{
+    font-family: "Lato";
+    font-size: 21px;
+    font-weight: 700;
+}
+.cards_sect .tariff-cost span.period{
+    font-family: 'Lato';
+    font-size: 13px;
+    color: #8d8d8d;
+    font-weight: 400;
+}
+.cards_sect .select{
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    margin-top: 20px;    
+}
+.cards_sect .select a{
+    text-decoration: none;
+    color: #282828;
+    font-family: 'Lato';
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*only left block*/
+div.cards_sect section.box_left{
+    border-top: 5px solid #f9d423;
+}
+section.box_left .package-icon{
+    color: #f9d423;
+    border-radius: 50%;
+    border: 5px solid #f9d423;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+.cards_sect section.box_left .package-features .prop span.val{
+    color: #f9d423;
+}
+.cards_sect  section.box_left .tariff-cost{
+    border-bottom: 4px solid #f9d423;
+}
+
+/*only L_center block*/
+
+div.cards_sect section.box_L_center{
+    border-top: 5px solid #7f8c8d;
+}
+section.box_L_center .package-icon{
+    color: #7f8c8d;
+    border-radius: 100%;
+    border: 5px solid #7f8c8d;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.cards_sect section.box_L_center .package-features .prop span.val{
+    color: #7f8c8d;
+}
+.cards_sect  section.box_L_center .tariff-cost{
+    border-bottom: 4px solid #7f8c8d;
+}
+
+/*only R_center block*/
+
+div.cards_sect section.box_R_center{
+    border-top: 5px solid #f85f40;
+}
+section.box_R_center .package-icon{
+    color: #f85f40;
+    border-radius: 100%;
+    border: 5px solid #f85f40;
+    border-top-color: transparent;
+}
+.cards_sect section.box_R_center .package-features .prop span.val{
+    color: #f85f40;
+}
+.cards_sect  section.box_R_center .tariff-cost{
+    border-bottom: 4px solid #f85f40;
 }
 
 
+/*only right block*/
+
+div.cards_sect section.box_right{
+    border-top: 5px solid #1abc9c;
+}
+section.box_right .package-icon{
+    color: #1abc9c;
+    border-radius: 100%;
+    border: 5px solid #1abc9c;
+}
+.cards_sect section.box_right .package-features .prop span.val{
+    color: #1abc9c;
+}
+.cards_sect  section.box_right .tariff-cost{
+    border-bottom: 4px solid #1abc9c;
+}
 
 
-
+/*ABOUT US*/
+section.about_us{
+    width: 100%;
+    height: 400px;
+    margin-top: 107px;
+}
 
 
 
