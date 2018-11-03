@@ -73,37 +73,66 @@ nav .header__logo{
     margin-top: 33px;
 }
 
-.login_form{
-    background: #2fac6c;
-    background-size: 100% 122px;
-    height: 122px;
+.member{
+    height: 120px;
+  }
+  
+  .registration{
+    min-height: 100%;
     display: flex;
-    justify-content: space-around;
-}
-
-.login_form .log_btn{
-    background-image: url(img/log_background.png);
-    background-size: 100% 100%;
-    background-color: Transparent;
-}
-
-.login_form .reg_btn{
-    background-color: Transparent;
-}
-.log_btn, .reg_btn{
-    font-family: "Lato";
-    font-size: 19px;
-    font-weight: 500;
-    text-transform: uppercase;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
+    justify-content: center;
     overflow: hidden;
-    outline:none;
-    height: 122px;
-    width: 50%;
-}
-
+    font-size: 22px;
+  }
+  
+  .login{
+    min-width: 50%;
+    background-color: #21424a;
+    z-index: 1;
+    text-align: center;
+    color: white;
+  }
+  
+  .login::after{
+  content: "";
+  width: 19%;
+  height: 0;
+  border-left: 50px solid #21424a;
+  border-right: 50px solid transparent;
+  border-top: 120px solid #21424a;
+  position: absolute;
+  }
+  
+  .login:hover{
+    background-color: #2fac6c;
+    cursor: pointer;
+  }
+  
+  .login:hover::after{
+    background-color: #2fac6c;
+    border-left: 50px solid #2fac6c;
+  border-right: 50px solid transparent;
+  border-top: 120px solid #2fac6c;
+    cursor: pointer;
+  }
+  
+  .registration span{
+    position: relative;
+    top: 35%;
+  }
+  
+  .register{
+    min-width: 50%;
+    background-color: #2fac6c;
+    text-align: center;
+    color: white;
+  }
+  
+  .register:hover{
+    background-color: #21424a;
+    cursor: pointer;
+  }
+  
 
 /*section check domain*/
 
@@ -213,8 +242,8 @@ section.package{
     width: 100%;
     height: max-content;
     background-color: #ffffff;
-    background-blend-mode: multiply;
     background-image: url(img/sect_backg.jpg);
+    background-blend-mode: multiply;
     background-size: 100% 400px ;
     background-repeat:no-repeat;
     
@@ -509,9 +538,76 @@ section.about_us .slogan{
     margin-top: 12px;
 }
 .creators .icons i {
-    width: 8px;
+    width: 8px;  
+}
+.creators .icons i:hover {
+    color: #1f89ba;
 }
 
+/*comments section*/
+section.comments{
+    background-image: url(img/slid_bg.jpg);
+    background-size: 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-position-y: -465px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    padding: 53px auto;
+    color: #ffffff;    
+}
+.slider-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    text-align: center;
+  }
+  
+  .menu {
+    position: absolute;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    margin: 0 .2em 1em;
+  }
+  .menu label:active + :focus{
+      background: #fff;
+  }
+  [id^="slide-dot"]{
+      display: none;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    margin: auto;
+    margin-top: 53px;
+    transition: left 0s .75s;
+  }
+  
+  [id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
+  }
 
 
 
