@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
 }
+
+.container {
+    width: 1193px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 a{
     text-decoration: none;
 }
@@ -21,29 +28,30 @@ header{
     background-image: url(img/safe_image.jpg);
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.83);
-    height: 943px;
+    background-position: top center;
+    height: calc(135vh - 75px);
 }
 
 nav{
     width: 100%;
     height: 51px;
-    margin-right: 203px;
-    margin-left: 202px;
-    margin-top: 39px;
+    margin-top: 35px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 nav .header__logo{
-    margin-right: auto;
-    margin-left: 3px;
-    margin-bottom: 29px;
+    margin-left: 9px;
 }
 .topnav a{
     color: #ffffff;
     font-family: "Lato";
     font-size: 16px;
     font-weight: 500;
-    padding: 34px 16px;
+    margin: 0px 31px 0;
+    padding-bottom: 34px;
+}
+.topnav a:last-child{
+    margin-right: 0;
 }
 .topnav a:hover{
     border-bottom: 1px solid #fff;
@@ -51,30 +59,43 @@ nav .header__logo{
 .topnav .icon{
     display: none;
 }
-.header_hello h1{
+
+.header_title {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header_title h1{
     color: #ffffff;
     font-family: "Lato";
-    font-size: 72px;
+    font-size: 63px;
     font-weight: 700;
     text-transform: uppercase;
-    height: 72px;
-    margin-top: 346px;
-    text-align: center;
-
+}
+@media (max-height: 490px) {
+    .header_slide, .header_title {
+        height: auto;
+    }
+    .header_title {
+        margin: 30px 0;
+    }
 }
 
-.header_tagline{
+.header_title h3{
     color: #ffffff;
     font-family: Georgia;
     font-size: 32px;
     font-style: italic;
     line-height: 47px;
     text-align: center;
-    margin-top: 33px;
 }
-
 .member{
     height: 120px;
+    position: sticky;
+    bottom: 0;
+    min-height: 2em;
   }
   
   .registration{
@@ -86,19 +107,19 @@ nav .header__logo{
   }
   
   .login{
-    min-width: 50%;
+    min-width: 45%;
     background-color: #21424a;
     z-index: 1;
-    text-align: center;
+    text-align: right;
     color: white;
   }
   
   .login::after{
   content: "";
-  width: 19%;
+  width: 0;
   height: 0;
-  border-left: 50px solid #21424a;
-  border-right: 50px solid transparent;
+  border-left: 49px solid #21424a;
+  border-right: 32px solid transparent;
   border-top: 120px solid #21424a;
   position: absolute;
   }
@@ -111,8 +132,8 @@ nav .header__logo{
   .login:hover::after{
     background-color: #2fac6c;
     border-left: 50px solid #2fac6c;
-  border-right: 50px solid transparent;
-  border-top: 120px solid #2fac6c;
+    border-right: 32px solid transparent;
+    border-top: 120px solid #2fac6c;
     cursor: pointer;
   }
   
@@ -120,11 +141,17 @@ nav .header__logo{
     position: relative;
     top: 35%;
   }
+  .login span{
+      margin-right: 25%;
+  }
+  .register span{
+    margin-left: 37%;
+}
   
   .register{
-    min-width: 50%;
+    min-width: 55%;;
     background-color: #2fac6c;
-    text-align: center;
+    text-align: left;
     color: white;
   }
   
@@ -138,21 +165,22 @@ nav .header__logo{
 
 section.check{
     background-color: #ffffff;
-    width: 100%;
-    height: 578px;
+    margin-bottom: 108px;
 }
-section.check div.domain_review .suggest_block{
+.suggest_block{
     text-align: center;
     margin-top: 90px;
 }
-section.check div.domain_review .suggest_block p.sugg_qstn{
+.suggest_block p.sugg_qstn{
     font-family: 'Lato';
     font-size: 22px;
+    font-weight: 400;
     color: rgba(56, 55, 55, 255);
 }
-section.check div.domain_review .suggest_block p.sugg_descript{
+.suggest_block p.sugg_descript{
     font-family: 'Montserrat';
     font-size: 15px;
+    font-weight: 400;
     color: rgba(162, 162, 162, 255);
     margin-top: 27px;
 }
@@ -160,7 +188,7 @@ section.check div.domain_review .suggest_block p.sugg_descript{
 
 section.check form.domain_form{
     text-align: center;
-    width: 890px;
+    width: 889px;
     height: 50px;
     border: 1px solid #cbcbcb; 
     display: flex;
@@ -205,34 +233,52 @@ section.check form.domain_form .domain_select{
 
 
 /* my table*/
-section.check table.domain_table{
-    margin:auto;
-    margin-top: 38px;
-    margin-bottom: 90px;
-    width: 892px;
-    height: 197px;
-    padding: 19px;
+.domain_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 889px;
     border: 1px solid #d9d9d9;
+    margin: 30px auto 0;
 }
-
-section.check table.domain_table tr, td{
-    text-align: center;
-    width: 220px;
-    height: 99px;
-    margin-top: 19px;
-    color: rgba(203, 203, 203, 255);
-    font-size: 12px;
-    font-family:'Lato';
+ .domain_list li{
+    width: 25%;
+    position: relative;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbcbcb;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
-.domain_table tr td::after{
-    content: "";
+ .domain_list li:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #d9d9d9;
     position: absolute;
-    width: 1px;
-    height: 40px;
-    color:black;
-    display: inline-block;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
 }
-
+ .domain_list li:before {
+    content: '';
+    display: block;
+    width: 1px;
+    background: #d9d9d9;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    bottom: 10px;
+}
+ .domain_list li:nth-child(4n):before {
+    content: none;
+}
+ .domain_list li:nth-child(n+5):after {
+    content: none;
+}
 
 
 
@@ -242,7 +288,7 @@ section.package{
     width: 100%;
     height: max-content;
     background-color: #ffffff;
-    background-image: url(img/sect_backg.jpg);
+    background-image: url(img/bg-package.jpg);
     background-blend-mode: multiply;
     background-size: 100% 400px ;
     background-repeat:no-repeat;
@@ -258,8 +304,6 @@ section.package{
 }
 section.package div.cards_sect{
     margin:auto;
-    width: 75%;
-    height: 655px;
     padding-top: 100px;
     padding-bottom: 96px;
     border-bottom: 2px dotted #d4d4d4;
@@ -294,12 +338,12 @@ div.cards_sect section{
     padding: 13px;
   }
 
-  div.cards_sect section .package-name{
+.cards_sect section .package-name{
     text-align: center;
     height: 16px;
     color: #282828;
     font-family: 'Lato';
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0 28px;
@@ -334,7 +378,7 @@ div.cards_sect section{
 
 .cards_sect .tariff-cost{
     width: 105px;
-    height: 21px;
+    height: max-content;
     margin: auto;
     margin-top: 34px;
     padding-bottom: 7px;
@@ -347,7 +391,7 @@ div.cards_sect section{
 }
 .cards_sect .tariff-cost span.cost{
     font-family: "Lato";
-    font-size: 21px;
+    font-size: 28px;
     font-weight: 700;
 }
 .cards_sect .tariff-cost span.period{
@@ -366,7 +410,7 @@ div.cards_sect section{
     text-decoration: none;
     color: #282828;
     font-family: 'Lato';
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -448,7 +492,6 @@ section.box_right .package-icon{
 
 /*ABOUT US*/
 section.about_us{
-    width: 75%;
     height: max-content;
     display: flex;
     margin: 107px auto;
@@ -529,12 +572,13 @@ section.about_us .slogan{
 }
 .creators .icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 15px;
     color: #bfbfbf;
     font-family: "Font Awesome";
     font-weight: 400;
-    margin-right: 8px;
+    font-size: 14px;
+    margin-right: 0px;
     margin-top: 12px;
 }
 .creators .icons i {
@@ -593,7 +637,7 @@ section.comments{
   }
   .slide {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 53px);
     position: absolute;
     top: 0;
     left: 100%;
@@ -608,6 +652,125 @@ section.comments{
     z-index: 100;
     transition: left .65s ease-out;
   }
+
+/*functions*/
+
+.functions{
+    width: 100%;
+    height: 342px;
+    background-color: #ffffff;    
+    display: inline-block;
+}
+.functions .wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 147px;
+    margin: auto;
+    margin-top: 99px;
+}
+/*for all function blocks*/
+.wrapper .function{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-icon .icon{
+    position: relative;
+    width: max-content;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+}
+.advantages{
+    width: max-content;
+    color: #303030;
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: 400;
+}
+.recommend{
+    color: #7e7e7e;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.03px;
+    width: 223px;
+    text-align: center;
+}
+
+/*block only*/
+
+
+/*first block only*/
+.function:nth-child(1) .service-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #f1c40f;
+    background-color: #f1c40f;
+    background-blend-mode: multiply;
+}
+.function:nth-child(1) .service-icon .icon{
+    top: 13px;
+    left: 21px;
+}
+
+
+
+
+/*secound*/
+.function:nth-child(2) .service-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #0faff1;
+    background-color: #0faff1;
+    background-blend-mode: multiply;
+}
+.function:nth-child(2) .service-icon .icon{
+    top: 12px;
+    left: 13px;
+}
+
+
+ /*third*/
+ .function:nth-child(3) .service-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #95a5a6;
+    background-color: #95a5a6;
+    background-blend-mode: multiply;
+}
+.function:nth-child(3) .service-icon .icon{
+    top: 12px;
+    left: 16px;
+}
+
+
+/*fourth*/
+.function:nth-child(4) .service-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #f1540f;
+    background-color: #f1540f;
+    background-blend-mode: multiply;
+}
+.function:nth-child(4) .service-icon .icon{
+    top: 12px;
+    left: 16px;
+}
+.footer {
+	padding-bottom: 30px;
+	background-color: #2a2a2a;
+    color: white;
+}
 
 
 
