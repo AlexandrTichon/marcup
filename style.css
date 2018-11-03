@@ -11,6 +11,12 @@ li{
 body{
     font-family: 'Lato', sans-serif, 'Montserrat';
 }
+
+.container {
+    width: 1197px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 header{
     width: 100%;
     height: 90px;
@@ -21,14 +27,16 @@ header{
     background-image: url(img/safe_image.jpg);
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.83);
-    height: 943px;
+    background-position: top center;
+    /* height: 943px; */
+    height: calc(100vh - 120px);
 }
 
 nav{
     width: 100%;
     height: 51px;
-    margin-right: 203px;
-    margin-left: 202px;
+    /* margin-right: 203px; */
+    /* margin-left: 202px; */
     margin-top: 39px;
     display: flex;
     justify-content: flex-end;
@@ -43,34 +51,57 @@ nav .header__logo{
     font-family: "Lato";
     font-size: 16px;
     font-weight: 500;
-    padding: 34px 16px;
+    margin: 34px 31px 0;
+    padding-bottom: 34px;
 }
 .topnav a:hover{
+    /* content: '';
+    height: 1px;
+    display: block;
+    background: #fff; */
     border-bottom: 1px solid #fff;
 }
 .topnav .icon{
     display: none;
 }
-.header_hello h1{
+
+.header_title {
+    height: calc(100vh - 120px - 90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_title h1{
     color: #ffffff;
     font-family: "Lato";
     font-size: 72px;
     font-weight: 700;
     text-transform: uppercase;
     height: 72px;
-    margin-top: 346px;
+    /* margin-top: 346px; */
     text-align: center;
 
 }
 
-.header_tagline{
+@media (max-height: 490px) {
+    .header_slide, .header_title {
+        height: auto;
+    }
+    .header_title {
+        margin: 30px 0;
+    }
+}
+
+.header_title h3{
     color: #ffffff;
     font-family: Georgia;
     font-size: 32px;
     font-style: italic;
     line-height: 47px;
     text-align: center;
-    margin-top: 33px;
+    margin-top: 73px;
 }
 
 .member{
@@ -138,8 +169,8 @@ nav .header__logo{
 
 section.check{
     background-color: #ffffff;
-    width: 100%;
-    height: 578px;
+    /* width: 100%; */
+    /* height: 578px; */
 }
 section.check div.domain_review .suggest_block{
     text-align: center;
@@ -213,6 +244,53 @@ section.check table.domain_table{
     height: 197px;
     padding: 19px;
     border: 1px solid #d9d9d9;
+}
+
+.domain_list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 889px;
+    border: 1px solid #d9d9d9;
+    margin: 30px auto 0;
+}
+
+.domain_list li{
+    width: 25%;
+    position: relative;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.domain_list li:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #d9d9d9;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+}
+
+.domain_list li:before {
+    content: '';
+    display: block;
+    width: 1px;
+    background: #d9d9d9;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    bottom: 10px;
+}
+
+.domain_list li:nth-child(4n):before {
+    content: none;
+}
+
+.domain_list li:nth-child(n+5):after {
+    content: none;
 }
 
 section.check table.domain_table tr, td{
