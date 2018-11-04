@@ -4,7 +4,8 @@
 }
 
 .container {
-    width: 1193px;
+    max-width: 1193px;
+    width: 75%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -27,9 +28,10 @@ header{
 .header_slide{
     background-image: url(img/safe_image.jpg);
     background-blend-mode: multiply;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.83);
-    background-position: top center;
     height: calc(135vh - 75px);
+    width: 100%;
 }
 
 nav{
@@ -58,7 +60,7 @@ nav .header__logo{
 }
 
 .header_title {
-    height: 100vh;
+    height: 111vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,7 +164,7 @@ nav .header__logo{
 
 section.check{
     background-color: #ffffff;
-    margin-bottom: 108px;
+    margin-bottom: 94px;
 }
 .suggest_block{
     text-align: center;
@@ -183,9 +185,9 @@ section.check{
 }
 
 
-section.check form.domain_form{
+form.domain_form{
     text-align: center;
-    width: 889px;
+    max-width: 889px;
     height: 50px;
     border: 1px solid #cbcbcb; 
     display: flex;
@@ -193,7 +195,7 @@ section.check form.domain_form{
     margin-top: 49px;
 }
 
-section.check form.domain_form label.domain_label{
+.domain_form label.domain_label{
     margin: 5px 0;
 	padding: 8px 15px;
 	font-size: 16px;
@@ -202,24 +204,24 @@ section.check form.domain_form label.domain_label{
 	color: #cbcbcb;
 	border-right: 1px solid #d9d9d9;
 }
-section.check form.domain_form input.domain_input{
+.domain_form input.domain_input{
     padding: 15px;
     font-size: 15px;
-    width: 730px;
     border: 0;
     background-color: transparent;
     font-weight: 500;
     padding-right: 0;
 }
-section.check form.domain_form .domain_select_wrapper{
+.domain_form .domain_select_wrapper{
     position: relative;
     height: auto;
     margin: 5px 0;
     width: 85px;
+    margin-left: auto;
     overflow: hidden;
     border-left: 1px solid #d9d9d9;
 }
-section.check form.domain_form .domain_select{
+.domain_form .domain_select{
     height: 100%;
     font-size: 16px;
 	line-height: 16px;
@@ -233,7 +235,7 @@ section.check form.domain_form .domain_select{
 .domain_list {
     display: flex;
     flex-wrap: wrap;
-    width: 889px;
+    max-width: 889px;
     border: 1px solid #d9d9d9;
     margin: 30px auto 0;
 }
@@ -277,27 +279,14 @@ section.check form.domain_form .domain_select{
     content: none;
 }
 
-
-
-
 /*package section*/
 section.package{
     width: 100%;
     height: max-content;
     background-color: #ffffff;
-    background-image: url(img/bg-package.jpg);
+    background-image: url(img/Packages_Photo.png);
     background-blend-mode: multiply;
-    background-size: 100% 400px ;
     background-repeat:no-repeat;
-    
-    /*
-    background-blend-mode: multiply;
-    background-image: repeating-linear-gradient(-45deg,
-    transparent,
-    transparent 5px,
-    rgba(80, 80, 80, 0.692) 6px,
-    rgba(80, 80, 80, 0.692) 1px); */
-
 }
 section.package div.cards_sect{
     margin:auto;
@@ -305,7 +294,13 @@ section.package div.cards_sect{
     padding-bottom: 96px;
     border-bottom: 2px dotted #d4d4d4;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+@media (max-width: 1357px){
+    .cards_sect section{
+        margin-top: 20px;
+    }
 }
 div.cards_sect section{
     box-shadow: 0 2px 2px rgba(0,0,0,0.15), 0 0 0 1px #eee;    
@@ -491,11 +486,19 @@ section.box_right .package-icon{
 section.about_us{
     height: max-content;
     display: flex;
-    margin: 107px auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 92px auto;
+}
+@media screen and (max-width: 1080px){
+    .about_us .pers-info{
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
 
 .about_us .story{
-    width: max-content;
+    width: 419px;
     border-right: 2px dotted #d4d4d4;
     padding-right: 99px;
 }
@@ -515,8 +518,8 @@ section.about_us{
 }
 
 section.about_us .slogan{
-    width: 419px;
-    height: 126px;
+    max-width: 419px;
+    height: max-content;
     margin-top: 33px;
     color: #747474;
     font-family: "Lato";
@@ -526,12 +529,13 @@ section.about_us .slogan{
 }
 /*pers-info*/
 .about_us .pers-info{
-    height:  200px;
-    width: 655px;
+    height:  max-content;
+    max-width: 548px;
+    width: 48%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 105px;
 }
 
 .about_us .pers-info .creators{
@@ -569,6 +573,7 @@ section.about_us .slogan{
 }
 .creators .icons{
     display: flex;
+
     justify-content: space-around;
     height: 15px;
     color: #bfbfbf;
@@ -587,13 +592,7 @@ section.about_us .slogan{
 
 /*comments section*/
 section.comments{
-    background-image: url(img/slid_bg.jpg);
-    background-size: 100%;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-color: rgba(0, 0, 0, 0.75);
-    background-position-y: -465px;
+    background-image: url(img/Comments_BG_Photo.png);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -626,9 +625,12 @@ section.comments{
     border: 1px solid #ffffff;
     margin: 0 .2em 1em;
   }
-  .menu label:active + :focus{
+  .menu label:active{
       background: #fff;
   }
+  .menu label:hover{
+    background: #fff;
+}
   [id^="slide-dot"]{
       display: none;
   }
@@ -654,17 +656,22 @@ section.comments{
 
 .functions{
     width: 100%;
-    height: 342px;
+    min-height: max-content;
     background-color: #ffffff;    
-    display: inline-block;
+    margin-bottom: 108px;
 }
 .functions .wrapper{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    height: 147px;
     margin: auto;
     margin-top: 99px;
+}
+@media screen and(max-width: 1200px){
+    .wrapper .function{
+        margin-top: 20px;
+    }
 }
 /*for all function blocks*/
 .wrapper .function{
@@ -767,17 +774,23 @@ section.comments{
 
 /*footer*/
 footer {
-	padding-bottom: 30px;
+	padding-bottom: 56px;
 	background-color: #2a2a2a;
-    color: white;
 }
 
 footer .footer-head{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
+    min-height: max-content;
     height: max-content;
     border-bottom: 1px solid #4a4a4a;
+}
+@media (max-width: 570px){
+    footer .footer-head{
+        padding-bottom: 48px;
+    }
 }
 footer nav{
     margin-top: 24px;
@@ -800,11 +813,23 @@ footer nav{
 .information{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
+    min-height: max-content;
     height: max-content;
     color: #686868;  
-    margin-top: 34px;
+    margin-top: 52px;
     font-family: "Lato";  
+}
+@media screen and (max-width: 1420px){
+    .site_links{
+        padding: 0;
+        margin-top: 20px;
+        border-color: transparent;
+    }
+    .contacts{
+        margin-top: 20px;
+    }
 }
  .auther_info {
     display: flex;
@@ -812,11 +837,13 @@ footer nav{
     height: 106px;;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: auto;
  }
  .auther_info .epigraph{
     font-weight: 300;
     font-size: 14px;
     line-height: 26px;    
+    float: left;
  }
  .auther_info .auther{
     font-weight: 400;
@@ -830,14 +857,123 @@ footer nav{
 .information .site_links{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     color: #686868;
+    padding-left: 108px;
+    padding-right: 108px;
+    border: 2px solid #393939;
+    border-bottom: transparent;
+    border-top: transparent;
+}
+@media (max-width: 1400px){
+    .site_links{
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
+.site_links .list_1{
+    padding-right: 69px;
 }
 .site_links ul li{
     list-style-type: none;
 }
 .site_links ul li::before{
-    content: url(./angle-right-solid.svg);
+    content: "❯";
+    color: #686868;
+    font-family: "Font Awesome";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 29.04px;
+    cursor: pointer;
+    padding-right: 8px;
 }
+.site_links ul li::before:hover{
+    color: #ffffff;
+}
+.site_links ul li::before:active{
+    color: #ffffff;
+}
+.site_links li a{
+    color: #686868;
+    font-family: "Lato";
+}
+
+.site_links li a:hover{
+    color: #ffffff;
+}
+.site_links li a:active{
+    color: #ffffff;
+}
+
+
+.contacts {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-around;
+  
+}
+.contacts .telephone{
+    display: flex;
+    flex-direction: row;
+}
+.contacts .email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.telephone a{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Lato";    
+}
+.email a{
+    font-family: "Lato";
+    font-size: 15px;
+    font-weight: 300;    
+}
+.contacts .telephone{
+    display: flex;
+    flex-direction: row;
+}
+.contacts .adress{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 29.12px;    
+}
+.contacts a{
+    color: #686868;
+    font-family: "Lato";
+    cursor: pointer;
+}
+.contacts a:hover{
+    color: #ffffff;
+}
+.contacts a:hover{
+    color: #ffffff;
+}
+.contacts .icon{
+    width: max-content;
+    height: 13px;
+    font-family: "Font Awesome";
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;        
+}
+.contacts .telephone .icon{
+    margin-right: 12px;
+}
+
+.contacts .icon:hover{
+    color: #ffffff;
+}
+.contacts .icon:active{
+    color: #ffffff;
+}
+
+
+
+
 
 
 
@@ -851,35 +987,5 @@ footer nav{
 @media screen and (max-width: 1100px){
     nav{
         margin-left: 10%;
-    }
-}
-
-@media screen and (max-width: 1000px){
-    .topnav a{display: none;}
-    .topnav .icon {
-        float: right;
-        display: block;
-        color: #fff;
-        font-size: 25px;
-        margin-top: -40px;
-    }
-    nav{width: 100%;}
-    .topnav.responsive{
-        position: relative;
-        top: 50px;
-        left: -200px;
-    }
-    header .topnav.responsive{
-        height: 340px;
-    }
-    .topnav.responsive a{
-        float: none;
-        text-align: left;
-        display: block;
-    }
-    .topnav.responsive a.icon{
-        position: absolute;
-        top: -50px;
-        left: -200px;
     }
 }
