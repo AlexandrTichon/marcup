@@ -56,9 +56,6 @@ nav .header__logo{
 .topnav a:hover{
     border-bottom: 1px solid #fff;
 }
-.topnav .icon{
-    display: none;
-}
 
 .header_title {
     height: 100vh;
@@ -766,10 +763,80 @@ section.comments{
     top: 12px;
     left: 16px;
 }
-.footer {
+
+
+/*footer*/
+footer {
 	padding-bottom: 30px;
 	background-color: #2a2a2a;
     color: white;
+}
+
+footer .footer-head{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: max-content;
+    border-bottom: 1px solid #4a4a4a;
+}
+footer nav{
+    margin-top: 24px;
+}
+.footnav a{
+    color: #686868;
+    font-family: "Lato";
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0px 21px 0;
+    text-transform: uppercase;
+}
+.footnav a:last-child{
+    margin-right: 0;
+}
+.footnav a:hover{
+    color: #fff;
+}
+
+.information{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: max-content;
+    color: #686868;  
+    margin-top: 34px;
+    font-family: "Lato";  
+}
+ .auther_info {
+    display: flex;
+    width: 292px;
+    height: 106px;;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ .auther_info .epigraph{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;    
+ }
+ .auther_info .auther{
+    font-weight: 400;
+    line-height: 26px;
+ }
+.auther span{
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.information .site_links{
+    display: flex;
+    flex-direction: row;
+    color: #686868;
+}
+.site_links ul li{
+    list-style-type: none;
+}
+.site_links ul li::before{
+    content: url(./angle-right-solid.svg);
 }
 
 
